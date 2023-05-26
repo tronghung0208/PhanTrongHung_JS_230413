@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Information</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box1">
+        <div class="form">
+          <h1>Thông Tin Học Sinh</h1>
+
+          <tr>
+            <td><span for="fullname">Họ và tên:</span></td>
+            <td><input class="name" type="text" id="fullname" /></td>
+          </tr>
+          <tr>
+            <td><span for="email">Email:</span></td>
+            <td><input class="email" type="email" id="email" /></td>
+          </tr>
+          <tr>
+            <td><span for="phone">Số điện thoại:</span></td>
+            <td><input class="tell" type="text" id="phone" /></td>
+          </tr>
+          <tr>
+            <td><span for="address">Quê quán:</span></td>
+            <td><input class="addess" type="text" id="address" /></td>
+          </tr>
+          <tr>
+            <td><span>Giới tính:</span></td>
+            <td>
+              <input
+                class="age"
+                type="radio"
+                id="male"
+                name="gender"
+                value="Nam"
+              />Nam
+
+              <input
+                class="age"
+                type="radio"
+                id="female"
+                name="gender"
+                value="Nữ"
+              />Nữ
+            </td>
+          </tr>
+          <div class="form-group">
+            <button class="btn">Lưu Lại</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="box2">
+        <h2>Danh sách học viên</h2>
+        <div class="search">
+          Tìm Kiếm Theo Tên Học Viên <input type="text2" id="searchInput" />
+          <button onclick="searchStudents()">Tìm</button>
+        </div>
+        <table id="studentTable">
+          <thead>
+            <tr>
+              <th onclick="sortTable(0)">Số thứ tự</th>
+              <th onclick="sortTable(1)">Tên</th>
+              <th onclick="sortTable(2)">Email</th>
+              <th onclick="sortTable(3)">Điện thoại</th>
+              <th onclick="sortTable(4)">Địa chỉ</th>
+              <th onclick="sortTable(5)">Giới tính</th>
+              <th onclick="sortTable(6)">Hành động</th>
+              <th onclick="sortTable(7)"><button>Sắp xếp anpha/b</button></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
